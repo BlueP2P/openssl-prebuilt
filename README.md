@@ -29,7 +29,7 @@ cd openssl-$OPENSSL_VERSION-arm64
 # "darwin64-arm64-cc" => {
 #     inherit_from     => [ "darwin-common", asm("aarch64_asm") ],
 #     CFLAGS           => add("-Wall"),
-#     cflags           => add("-arch arm64 -isysroot /Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk"),
+#     cflags           => add("-arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk"),
 #     lib_cppflags     => add("-DL_ENDIAN"),
 #     bn_ops           => "SIXTY_FOUR_BIT_LONG",
 #     perlasm_scheme   => "macosx",
