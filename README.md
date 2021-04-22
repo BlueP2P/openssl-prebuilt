@@ -41,4 +41,5 @@ export BUILD_TOOLS=/Applications/Xcode.app/Contents/Developer
 export CC="${BUILD_TOOLS}/usr/bin/gcc -arch arm64"
 ./Configure iphoneos-cross
 make
+# Run lipo for libssl.a libcrypto.a
 ```
