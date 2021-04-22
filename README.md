@@ -33,4 +33,12 @@ cd ..
 mkdir openssl-mac
 lipo -create openssl-$OPENSSL_VERSION-arm64/libcrypto.a openssl-$OPENSSL_VERSION-x86_64/libcrypto.a -output openssl-mac/libcrypto.a
 lipo -create openssl-$OPENSSL_VERSION-arm64/libssl.a openssl-$OPENSSL_VERSION-x86_64/libssl.a -output openssl-mac/libssl.a
+
+# iPhoneOS SDK (seperate)
+export CROSS_TOP=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer
+export CROSS_SDK=iPhoneOS.sdk
+export BUILD_TOOLS=/Applications/Xcode.app/Contents/Developer
+export CC="${BUILD_TOOLS}/usr/bin/gcc -arch arm64"
+./Configure iphoneos-cross
+make
 ```
